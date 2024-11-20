@@ -1,0 +1,95 @@
+import 'package:mal3abna/models/player_model.dart';
+
+final List<PlayerModel> playersList = [
+  PlayerModel(
+    playerNumber: 1,
+    playerName: "FeKry",
+    isSelected: false,
+    playerImage: "assets/players/fekry.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 2,
+    playerName: "MoMo",
+    isSelected: false,
+    playerImage: "assets/players/mohab.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 3,
+    playerName: "Omar Hatem",
+    isSelected: false,
+    playerImage: "assets/players/omar hatem.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Omar Amr",
+    isSelected: false,
+    playerImage: "assets/players/omar amr.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Wasseem",
+    isSelected: false,
+    playerImage: "assets/players/wasseem.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Adham",
+    isSelected: false,
+    playerImage: "assets/players/adham.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Enani",
+    isSelected: false,
+    playerImage: "assets/players/enani.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Hazem",
+    isSelected: false,
+    playerImage: "assets/players/hazem.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Antar",
+    isSelected: false,
+    playerImage: "assets/players/antar.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 4,
+    playerName: "Sho2o",
+    isSelected: false,
+    playerImage: "assets/players/sho2o.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+  PlayerModel(
+    playerNumber: 3,
+    playerName: "Sherif",
+    isSelected: false,
+    playerImage: "assets/players/sherif.jpg",
+    numberOfGoals: 0,
+    numberOfAssists: 0,
+  ),
+];
+
+List<PlayerModel> selectedPlayers = [];
+int numberOfGoals=0;
