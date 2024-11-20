@@ -7,12 +7,12 @@ class GamePlayerWidget extends StatefulWidget {
   bool isSelected;
   int index;
 
-  GamePlayerWidget(
-      {Key? key,
-      required this.playerModel,
-      required this.isSelected,
-      required this.index})
-      : super(key: key);
+  GamePlayerWidget({
+    Key? key,
+    required this.playerModel,
+    required this.isSelected,
+    required this.index,
+  }) : super(key: key);
 
   @override
   State<GamePlayerWidget> createState() => _GamePlayerWidgetState();
