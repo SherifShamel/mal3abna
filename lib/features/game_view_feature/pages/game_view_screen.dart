@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal3abna/data/players_data.dart';
 import 'package:mal3abna/provider/game_score_provider.dart';
+import 'package:mal3abna/provider/players_provider.dart';
 
 import '../widgets/game_player_widget.dart';
 
@@ -19,6 +20,7 @@ class _GameViewScreenState extends ConsumerState<GameViewScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final playingPlayers = ref.watch(selectedPlayersProvider);
     final score = ref.watch(gameScoreProvider);
     return Scaffold(
       appBar: AppBar(
@@ -36,11 +38,11 @@ class _GameViewScreenState extends ConsumerState<GameViewScreen> {
         children: [
           Expanded(
             child: GridView.builder(
-              itemCount: selectedPlayers.length,
+              itemCount: playingPlayers.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2),
               itemBuilder: (context, index) => GamePlayerWidget(
-                playerModel: selectedPlayers[index],
+                playerModel: playingPlayers[index],
               ),
             ),
           ),

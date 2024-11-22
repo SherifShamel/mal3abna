@@ -7,7 +7,6 @@ class GameScoreNotifier extends StateNotifier<int> {
   void goalFound() {
     state = numberOfGoals;
   }
-
 }
 
 final gameScoreProvider = StateNotifierProvider<GameScoreNotifier, int>(

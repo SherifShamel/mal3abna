@@ -1,36 +1,26 @@
 import 'package:flutter/material.dart';
-import 'package:mal3abna/data/players_data.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal3abna/models/player_model.dart';
+import 'package:mal3abna/provider/players_provider.dart';
 
-class GamePlayerWidget extends StatefulWidget {
+class GamePlayerWidget extends ConsumerWidget {
   final PlayerModel playerModel;
-  bool isSelected;
-  int index;
 
-  GamePlayerWidget({
+  const GamePlayerWidget({
     Key? key,
     required this.playerModel,
-    required this.isSelected,
-    required this.index,
   }) : super(key: key);
 
   @override
-  State<GamePlayerWidget> createState() => _GamePlayerWidgetState();
-}
-
-class _GamePlayerWidgetState extends State<GamePlayerWidget> {
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    List<PlayerModel> selectedData = ref.read(selectedPlayersProvider);
+    print(selectedData.length);
     return InkWell(
       onTap: () {
-        setState(
-          () {
-            widget.isSelected = !widget.isSelected;
-            widget.isSelected == true
-                ? selectedPlayers.add(widget.playerModel)
-                : selectedPlayers.remove(widget.playerModel);
-          },
-        );
+        final wasSelected = ref
+            .read(selectedPlayersProvider.notifier)
+            .togglePlayerSelected(playerModel);
+        playerModel.isSelected = wasSelected;
       },
       child: ClipRRect(
         clipBehavior: Clip.antiAlias,
@@ -41,7 +31,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
             children: [
               Image.asset(
                 // fit: BoxFit.fitHeight,
-                widget.playerModel.playerImage,
+                playerModel.playerImage,
               ),
               Positioned(
                 left: 0,
@@ -57,7 +47,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                     color: Colors.black54,
                   ),
                   child: Text(
-                    widget.playerModel.playerName,
+                    playerModel.playerName,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
@@ -67,10 +57,12 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                 ),
               ),
               Icon(
-                selectedPlayers.length > 5
+                selectedData.length > 5
                     ? Icons.looks_two
                     : Icons.looks_one_rounded,
-                color: widget.isSelected == false ? Colors.white : Colors.green,
+                color: playerModel.isSelected == false
+                    ? Colors.white
+                    : Colors.green,
               ),
             ],
           ),
