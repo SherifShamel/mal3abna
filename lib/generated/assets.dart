@@ -3,6 +3,19 @@ class Assets {
   Assets._();
 
   static const String assetsArrowAnimation = 'assets/ArrowAnimation.gif';
+  static const String configApplicationThemeManager = 'lib/core/config/application_theme_manager.dart';
+  static const String configConstants = 'lib/core/config/constants.dart';
+  static const String configPageRouteNames = 'lib/core/config/page_route_names.dart';
+  static const String configRoutes = 'lib/core/config/routes.dart';
+  static const String dataGameStatistics = 'lib/data/game_statistics.dart';
+  static const String dataPlayersData = 'lib/data/players_data.dart';
+  static const String generatedAssets = 'lib/generated/assets.dart';
+  static const String libMain = 'lib/main.dart';
+  static const String modelsGameModel = 'lib/models/game_model.dart';
+  static const String modelsPlayerModel = 'lib/models/player_model.dart';
+  static const String pagesGameViewScreen = 'lib/features/game_view_feature/pages/game_view_screen.dart';
+  static const String pagesHomePage = 'lib/features/home_feature/pages/home_page.dart';
+  static const String pagesPlayerScoreView = 'lib/features/player_score_feature/pages/player_score_view.dart';
   static const String playersAdham = 'assets/players/adham.jpg';
   static const String playersAntar = 'assets/players/antar.jpg';
   static const String playersEnani = 'assets/players/enani.jpg';
@@ -12,5 +25,9 @@ class Assets {
   static const String playersSherif = 'assets/players/sherif.jpg';
   static const String playersSho2o = 'assets/players/sho2o.jpg';
   static const String playersWasseem = 'assets/players/wasseem.jpg';
+  static const String providerGameScoreProvider = 'lib/provider/game_score_provider.dart';
+  static const String splashFeatureSplashScreen = 'lib/features/splash_feature/splash_screen.dart';
+  static const String widgetsGamePlayerWidget = 'lib/features/game_view_feature/widgets/game_player_widget.dart';
+  static const String widgetsHomePlayerWidget = 'lib/features/home_feature/widgets/home_player_widget.dart';
 
 }

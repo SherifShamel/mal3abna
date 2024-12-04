@@ -23,29 +23,6 @@ class HomePage extends StatelessWidget {
             playerModel: playersList[index],
             isSelected: playersList[index].isSelected),
       ),
-      floatingActionButton: FloatingActionButton(
-        heroTag: "Click To Go!",
-        onPressed: () {
-          if (selectedPlayers.length != 10) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              const SnackBar(
-                content: Text(
-                  "Must Select at least 10 Players!",
-                ),
-              ),
-            );
-          } else {
-            Navigator.pushNamed(
-              context,
-              PagesRouteName.gameView,
-              arguments: selectedPlayers,
-            );
-          }
-        },
-        child: const Icon(
-          Icons.place,
-        ),
-      ),
     );
   }
 }
