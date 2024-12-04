@@ -1,12 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:mal3abna/core/config/application_theme_manager.dart';
-import 'package:mal3abna/core/config/page_route_names.dart';
 import 'package:mal3abna/data/players_data.dart';
 import 'package:mal3abna/features/home_feature/widgets/home_player_widget.dart';
 import 'package:mal3abna/features/home_feature/widgets/my_floating_button.dart';
-import 'package:mal3abna/models/player_model.dart';
-import 'package:mal3abna/provider/my_shared_preferences_data.dart';
 import 'package:mal3abna/provider/players_provider.dart';
 
 class HomePage extends ConsumerWidget {

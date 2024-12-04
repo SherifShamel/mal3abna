@@ -17,7 +17,6 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    var prefs = MySharedPrefs();
     return Scaffold(
 
       body: Stack(
