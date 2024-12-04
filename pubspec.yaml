@@ -15,8 +15,15 @@ dependencies:
   cupertino_icons: ^1.0.2
   provider: ^6.1.2
   flutter_riverpod: ^2.4.10
+  shared_preferences: ^2.2.3
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+
+
 
 dev_dependencies:
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.9
   flutter_test:
     sdk: flutter
 
@@ -28,8 +35,9 @@ flutter:
   uses-material-design: true
 
   assets:
-   - assets/
-   - assets/players/
+    - assets/
+    - assets/players/
+    - lib/generated/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

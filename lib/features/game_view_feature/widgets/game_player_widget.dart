@@ -12,7 +12,13 @@ class GamePlayerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
+      onTap: () async {
+        // await showDialog(
+        //   context: context,
+        //   builder: (context) => AlertDialog(
+        //     title: Text(playerModel.playerName),
+        //   ),
+        // );
         Navigator.push(
           context,
           MaterialPageRoute(
@@ -29,10 +35,9 @@ class GamePlayerWidget extends StatelessWidget {
           child: Stack(
             alignment: AlignmentDirectional.topEnd,
             children: [
-              Image.asset(
-                  height: double.infinity,
-                  fit: BoxFit.fill,
-                  playerModel.playerImage),
+              Center(
+                child: Image.asset(playerModel.playerImage),
+              ),
               Positioned(
                 left: 0,
                 right: 0,

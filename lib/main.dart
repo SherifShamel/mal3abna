@@ -3,10 +3,14 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:mal3abna/core/config/application_theme_manager.dart';
 import 'package:mal3abna/core/config/page_route_names.dart';
 import 'package:mal3abna/core/config/routes.dart';
+import 'package:mal3abna/provider/my_shared_preferences_data.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  var pref = MySharedPrefs();
+  await pref.loadSettings();
   runApp(
     const ProviderScope(
       child: MyApp(),

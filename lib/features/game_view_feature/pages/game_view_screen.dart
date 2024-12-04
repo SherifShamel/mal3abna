@@ -25,14 +25,6 @@ class _GameViewScreenState extends ConsumerState<GameViewScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Score: $score - 0"),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: const Icon(
-              Icons.settings,
-            ),
-          ),
-        ],
       ),
       body: Column(
         children: [

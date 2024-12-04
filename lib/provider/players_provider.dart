@@ -17,6 +17,11 @@ class PlayersNotifier extends StateNotifier<List<PlayerModel>> {
       return true;
     }
   }
+
+  void addPlayer(PlayerModel player) {
+    state = [...state,player];
+    print(state.length);
+  }
 }
 
 final selectedPlayersProvider =

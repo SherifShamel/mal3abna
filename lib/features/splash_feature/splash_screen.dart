@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:mal3abna/core/config/application_theme_manager.dart';
 import 'package:mal3abna/core/config/constants.dart';
 import 'package:mal3abna/core/config/page_route_names.dart';
+import 'package:mal3abna/provider/my_shared_preferences_data.dart';
 
 import '../../main.dart';
 
@@ -16,7 +17,9 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var prefs = MySharedPrefs();
     return Scaffold(
+
       body: Stack(
         children: [
           Center(
@@ -51,8 +54,10 @@ class _SplashScreenState extends State<SplashScreen> {
               ],
             ),
           ),
+
         ],
       ),
+
     );
   }
 }
