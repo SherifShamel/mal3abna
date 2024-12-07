@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mal3abna/data/players_data.dart';
+import 'package:mal3abna/generated/assets.dart';
 import 'package:mal3abna/models/player_model.dart';
 
 class GamePlayerWidget extends StatefulWidget {
@@ -39,9 +40,9 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
           child: Stack(
             alignment: AlignmentDirectional.topEnd,
             children: [
-              Image.asset(
+              Image.network(
                 // fit: BoxFit.fitHeight,
-                widget.playerModel.playerImage,
+                "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fnaruto%2Fimages%2Fd%2Fd6%2FNaruto_Part_I.png%2Frevision%2Flatest%2Fscale-to-width-down%2F1200%3Fcb%3D20210223094656&f=1&nofb=1&ipt=8973a1827a8a81d9df262d4b6337690b870f573f1619251010e639ccfc1898b3&ipo=images",
               ),
               Positioned(
                 left: 0,
@@ -57,7 +58,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                     color: Colors.black54,
                   ),
                   child: Text(
-                    widget.playerModel.playerName,
+                    "Shero",
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
