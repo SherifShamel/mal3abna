@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: "Mal3abna App",
       theme: ApplicationThemeManager.lightTheme,
       initialRoute: PagesRouteName.initial,
