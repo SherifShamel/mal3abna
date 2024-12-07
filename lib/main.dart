@@ -13,6 +13,7 @@ void main() async {
   await Hive.initFlutter();
   await Hive.openBox(kPlayersBox);
   Hive.registerAdapter(PlayerModelAdapter());
+
   runApp(
     const ProviderScope(
       child: MyApp(),

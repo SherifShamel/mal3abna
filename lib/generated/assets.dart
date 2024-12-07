@@ -15,6 +15,7 @@ class Assets {
   static const String libMain = 'lib/main.dart';
   static const String modelsGameModel = 'lib/models/game_model.dart';
   static const String modelsPlayerModel = 'lib/models/player_model.dart';
+  static const String pagesAddPlayerView = 'lib/features/add_player_feature/pages/add_player_view.dart';
   static const String pagesGameViewScreen = 'lib/features/game_view_feature/pages/game_view_screen.dart';
   static const String pagesHomePage = 'lib/features/home_feature/pages/home_page.dart';
   static const String pagesPlayerScoreView = 'lib/features/player_score_feature/pages/player_score_view.dart';
@@ -29,6 +30,7 @@ class Assets {
   static const String playersWasseem = 'assets/players/wasseem.jpg';
   static const String providerGameScoreProvider = 'lib/provider/game_score_provider.dart';
   static const String splashFeatureSplashScreen = 'lib/features/splash_feature/splash_screen.dart';
+  static const String widgetsCustomTextFormField = 'lib/core/config/widgets/custom_text_form_field.dart';
   static const String widgetsGamePlayerWidget = 'lib/features/game_view_feature/widgets/game_player_widget.dart';
   static const String widgetsHomePlayerWidget = 'lib/features/home_feature/widgets/home_player_widget.dart';
 
