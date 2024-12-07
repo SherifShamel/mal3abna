@@ -30,6 +30,7 @@ class Assets {
   static const String playersWasseem = 'assets/players/wasseem.jpg';
   static const String providerGameScoreProvider = 'lib/provider/game_score_provider.dart';
   static const String splashFeatureSplashScreen = 'lib/features/splash_feature/splash_screen.dart';
+  static const String widgetsAddPlayerForm = 'lib/features/add_player_feature/widgets/add_player_form.dart';
   static const String widgetsCustomTextFormField = 'lib/core/config/widgets/custom_text_form_field.dart';
   static const String widgetsGamePlayerWidget = 'lib/features/game_view_feature/widgets/game_player_widget.dart';
   static const String widgetsHomePlayerWidget = 'lib/features/home_feature/widgets/home_player_widget.dart';
