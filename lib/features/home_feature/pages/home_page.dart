@@ -21,7 +21,8 @@ class HomePage extends StatelessWidget {
         itemBuilder: (context, index) => GamePlayerWidget(
             index: index,
             playerModel: playersList[index],
-            isSelected: playersList[index].isSelected),
+            isSelected: playersList[index].isSelected,
+        ),
       ),
     );
   }

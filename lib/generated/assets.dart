@@ -7,6 +7,8 @@ class Assets {
   static const String configConstants = 'lib/core/config/constants.dart';
   static const String configPageRouteNames = 'lib/core/config/page_route_names.dart';
   static const String configRoutes = 'lib/core/config/routes.dart';
+  static const String cubitsAddPlayersCubit = 'lib/features/home_feature/cubits/add_players_cubit.dart';
+  static const String cubitsAddPlayersStates = 'lib/features/home_feature/cubits/add_players_states.dart';
   static const String dataGameStatistics = 'lib/data/game_statistics.dart';
   static const String dataPlayersData = 'lib/data/players_data.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
