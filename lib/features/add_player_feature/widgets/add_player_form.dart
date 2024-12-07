@@ -33,10 +33,16 @@ class _AddPlayerFormState extends State<AddPlayerForm> {
               },
             ),
             const SizedBox(height: 20),
-            Container(
-              color: Colors.grey,
-              width: 30,
-              height: 30,
+            ClipRRect(
+              borderRadius: BorderRadius.circular(18),
+              child: SizedBox(
+                width: MediaQuery.sizeOf(context).width * 0.7,
+                // height: MediaQuery.sizeOf(context).height * 0.3,
+                child: Image.network(
+                  fit: BoxFit.cover,
+                  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.wikia.nocookie.net%2Fnaruto%2Fimages%2Fd%2Fd6%2FNaruto_Part_I.png%2Frevision%2Flatest%2Fscale-to-width-down%2F1200%3Fcb%3D20210223094656&f=1&nofb=1&ipt=8973a1827a8a81d9df262d4b6337690b870f573f1619251010e639ccfc1898b3&ipo=images",
+                ),
+              ),
             ),
             const Spacer(),
             FloatingActionButton.extended(

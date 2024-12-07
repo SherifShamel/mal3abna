@@ -34,7 +34,6 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
         );
       },
       child: ClipRRect(
-        clipBehavior: Clip.antiAlias,
         borderRadius: BorderRadius.circular(25),
         child: Card(
           child: Stack(
@@ -49,12 +48,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                 right: 0,
                 bottom: 0,
                 child: Container(
-                  clipBehavior: Clip.antiAlias,
                   decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(25),
-                      bottomRight: Radius.circular(25),
-                    ),
                     color: Colors.black54,
                   ),
                   child: Text(
