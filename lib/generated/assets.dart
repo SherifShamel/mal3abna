@@ -13,6 +13,7 @@ class Assets {
   static const String dataPlayersData = 'lib/data/players_data.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';
+  static const String libSimpleBlocObserver = 'lib/simple_bloc_observer.dart';
   static const String modelsGameModel = 'lib/models/game_model.dart';
   static const String modelsPlayerModel = 'lib/models/player_model.dart';
   static const String pagesAddPlayerView = 'lib/features/add_player_feature/pages/add_player_view.dart';
