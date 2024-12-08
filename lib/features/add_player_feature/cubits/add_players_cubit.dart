@@ -13,10 +13,13 @@ class AddPlayersCubit extends Cubit<AddPlayersStates> {
     try {
       var playersBox = Hive.box<PlayerModel>(kPlayersBox);
 
-      emit(AddPlayerSuccess());
       await playersBox.add(playerModel);
+      await playersBox.close();
+      emit(AddPlayerSuccess());
     } catch (e) {
-      AddPlayerFailure(e.toString());
+      emit(
+        AddPlayerFailure(e.toString()),
+      );
     }
   }
 }

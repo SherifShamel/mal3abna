@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mal3abna/core/config/widgets/custom_text_form_field.dart';
+import 'package:mal3abna/features/add_player_feature/cubits/add_players_cubit.dart';
 import 'package:mal3abna/main.dart';
+import 'package:mal3abna/models/player_model.dart';
 
 class AddPlayerForm extends StatefulWidget {
   const AddPlayerForm({super.key});
@@ -50,6 +53,14 @@ class _AddPlayerFormState extends State<AddPlayerForm> {
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+
+                  var playerModel = PlayerModel(
+                    playerNumber: 1,
+                    playerName: playerName!,
+                    playerImage: 'playerImage',
+                  );
+                  BlocProvider.of<AddPlayersCubit>(context)
+                      .addPlayer(playerModel);
                   navigatorKey.currentState!.pop();
                 } else {
                   autoValidateMode = AutovalidateMode.always;

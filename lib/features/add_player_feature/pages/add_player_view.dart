@@ -10,7 +10,9 @@ class AddPlayerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return BlocProvider(
+      create: (context) => AddPlayersCubit(),
+      child: Scaffold(
         appBar: AppBar(
           title: const Text("Add Player"),
           centerTitle: false,
@@ -30,11 +32,11 @@ class AddPlayerView extends StatelessWidget {
                 }
 
               case AddPlayerSuccess():
-                {
-                  navigatorKey.currentState!.pop();
-                }
+                {}
             }
           },
-        ));
+        ),
+      ),
+    );
   }
 }
