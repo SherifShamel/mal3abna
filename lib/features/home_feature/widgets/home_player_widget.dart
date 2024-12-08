@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mal3abna/data/players_data.dart';
-import 'package:mal3abna/generated/assets.dart';
 import 'package:mal3abna/models/player_model.dart';
 
 class GamePlayerWidget extends StatefulWidget {
