@@ -15,10 +15,10 @@ class AddPlayersCubit extends Cubit<AddPlayersStates> {
 
       await playersBox.add(playerModel);
       await playersBox.close();
-      emit(AddPlayerSuccess());
+      emit(AddPlayerSuccess(playersBox.name));
     } catch (e) {
       emit(
-        AddPlayerFailure(e.toString()),
+        AddPlayerError(e.toString()),
       );
     }
   }

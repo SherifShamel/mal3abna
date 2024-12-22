@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mal3abna/data/players_data.dart';
 import 'package:mal3abna/features/add_player_feature/cubits/add_players_cubit.dart';
 import 'package:mal3abna/features/add_player_feature/cubits/add_players_states.dart';
 import 'package:mal3abna/features/add_player_feature/widgets/add_player_form.dart';
-import 'package:mal3abna/main.dart';
 
 class AddPlayerView extends StatelessWidget {
   const AddPlayerView({super.key});
@@ -26,7 +26,7 @@ class AddPlayerView extends StatelessWidget {
                   const CircularProgressIndicator();
                 }
 
-              case AddPlayerFailure():
+              case AddPlayerError():
                 {
                   Center(child: Text(state.errorMsg));
                 }

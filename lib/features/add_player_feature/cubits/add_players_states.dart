@@ -1,9 +1,12 @@
 sealed class AddPlayersStates{}
 
 class AddPlayerLoading extends AddPlayersStates{}
-class AddPlayerSuccess extends AddPlayersStates{}
-class AddPlayerFailure extends AddPlayersStates{
+class AddPlayerSuccess extends AddPlayersStates{
+  String playerName;
+  AddPlayerSuccess(this.playerName);
+}
+class AddPlayerError extends AddPlayersStates{
   final String errorMsg;
 
-  AddPlayerFailure(this.errorMsg);
+  AddPlayerError(this.errorMsg);
 }

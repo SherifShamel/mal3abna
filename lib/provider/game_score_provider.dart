@@ -5,6 +5,7 @@ class GameScoreNotifier extends StateNotifier<int> {
   GameScoreNotifier() : super(0);
 
   void goalFound() {
+    numberOfGoals++;
     state = numberOfGoals;
   }
 

@@ -9,8 +9,6 @@ import 'package:mal3abna/core/config/routes.dart';
 import 'package:mal3abna/models/player_model.dart';
 import 'package:mal3abna/simple_bloc_observer.dart';
 
-import 'features/add_player_feature/cubits/add_players_cubit.dart';
-
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
 void main() async {
