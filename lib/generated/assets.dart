@@ -18,7 +18,6 @@ class Assets {
   static const String libSimpleBlocObserver = 'lib/simple_bloc_observer.dart';
   static const String modelsGameModel = 'lib/models/game_model.dart';
   static const String modelsPlayerModel = 'lib/models/player_model.dart';
-  static const String modelsPlayerModel.g = 'lib/models/player_model.g.dart';
   static const String pagesAddPlayerView = 'lib/features/add_player_feature/pages/add_player_view.dart';
   static const String pagesGameViewScreen = 'lib/features/game_view_feature/pages/game_view_screen.dart';
   static const String pagesHomePage = 'lib/features/home_feature/pages/home_page.dart';
@@ -29,8 +28,6 @@ class Assets {
   static const String playersFekry = 'assets/players/fekry.jpg';
   static const String playersHazem = 'assets/players/hazem.jpg';
   static const String playersMohab = 'assets/players/mohab.jpg';
-  static const String playersOmar amr = 'assets/players/omar amr.jpg';
-  static const String playersOmar hatem = 'assets/players/omar hatem.jpg';
   static const String playersSherif = 'assets/players/sherif.jpg';
   static const String playersSho2o = 'assets/players/sho2o.jpg';
   static const String playersWasseem = 'assets/players/wasseem.jpg';
