@@ -18,7 +18,6 @@ class AddPlayerView extends StatelessWidget {
           centerTitle: false,
         ),
         body: BlocConsumer<AddPlayersCubit, AddPlayersStates>(
-          builder: (context, state) => const AddPlayerForm(),
           listener: (BuildContext context, state) {
             switch (state) {
               case AddPlayerLoading():
@@ -35,6 +34,7 @@ class AddPlayerView extends StatelessWidget {
                 {}
             }
           },
+          builder: (context, state) => const AddPlayerForm(),
         ),
       ),
     );

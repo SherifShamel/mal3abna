@@ -8,16 +8,10 @@ import 'get_players_states.dart';
 class GetPlayersCubit extends Cubit<GetPlayersStates> {
   GetPlayersCubit() : super(GetPlayersLoading());
 
-  fetchAllPlayers() async {
-    try {
-      var playersBox = Hive.box<PlayerModel>(kPlayersBox);
+  List<PlayerModel>? players;
+  fetchAllPlayers() {
+    var playersBox = Hive.box<PlayerModel>(kPlayersBox);
 
-      List<PlayerModel> playersList = playersBox.values.toList();
-      emit(GetPlayersSuccess(players: playersList));
-    } catch (e) {
-      emit(
-        GetPlayersError(e.toString()),
-      );
-    }
+    players = playersBox.values.toList();
   }
 }

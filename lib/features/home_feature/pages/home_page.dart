@@ -3,8 +3,10 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mal3abna/core/config/page_route_names.dart';
 import 'package:mal3abna/data/players_data.dart';
 import 'package:mal3abna/features/home_feature/cubits/get_players_cubit.dart';
+import 'package:mal3abna/features/home_feature/cubits/get_players_states.dart';
 import 'package:mal3abna/features/home_feature/widgets/home_player_widget.dart';
 import 'package:mal3abna/main.dart';
+import 'package:mal3abna/models/player_model.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -28,15 +30,26 @@ class HomePage extends StatelessWidget {
             ),
           ],
         ),
-        body: GridView.builder(
-          itemCount: playersList.length,
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 2),
-          itemBuilder: (context, index) => GamePlayerWidget(
-            index: index,
-            playerModel: playersList[index],
-            isSelected: playersList[index].isSelected,
-          ),
+        body: BlocBuilder<GetPlayersCubit, GetPlayersStates>(
+          builder: (context, state) {
+            BlocProvider.of<GetPlayersCubit>(context).fetchAllPlayers();
+            List<PlayerModel> players =
+                BlocProvider.of<GetPlayersCubit>(context).players ?? [];
+
+            print(players.length);
+
+            return GridView.builder(
+              itemCount: players.length,
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+              ),
+              itemBuilder: (context, index) => GamePlayerWidget(
+                index: index,
+                playerModel: players[index],
+                isSelected: players[index].isSelected,
+              ),
+            );
+          },
         ),
       ),
     );

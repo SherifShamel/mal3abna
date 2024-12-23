@@ -51,7 +51,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                     color: Colors.black54,
                   ),
                   child: Text(
-                    "Shero",
+                    "${widget.playerModel.playerName}",
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
