@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mal3abna/data/players_data.dart';
+import 'package:mal3abna/features/home_feature/cubits/selectingPlayersCubit.dart';
+import 'package:mal3abna/features/home_feature/cubits/selectingPlayersStates.dart';
 import 'package:mal3abna/models/player_model.dart';
 
 class GamePlayerWidget extends StatefulWidget {
@@ -23,14 +26,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        setState(
-          () {
-            widget.isSelected = !widget.isSelected;
-            widget.isSelected == true
-                ? selectedPlayers.add(widget.playerModel)
-                : selectedPlayers.remove(widget.playerModel);
-          },
-        );
+        BlocProvider.of<SelectingPlayersCubit>(context).addSelectedPlayer(widget.playerModel);
       },
       child: ClipRRect(
         borderRadius: BorderRadius.circular(25),
@@ -51,7 +47,7 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                     color: Colors.black54,
                   ),
                   child: Text(
-                    "${widget.playerModel.playerName}",
+                    widget.playerModel.playerName,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
@@ -64,7 +60,9 @@ class _GamePlayerWidgetState extends State<GamePlayerWidget> {
                 selectedPlayers.length > 5
                     ? Icons.looks_two
                     : Icons.looks_one_rounded,
-                color: widget.isSelected == false ? Colors.white : Colors.green,
+                color: widget.isSelected == false
+                    ? Colors.white
+                    : Colors.green,
               ),
             ],
           ),

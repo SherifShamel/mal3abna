@@ -18,6 +18,7 @@ void main() async {
   Hive.registerAdapter(PlayerModelAdapter());
   await Hive.openBox<PlayerModel>(kPlayersBox);
 
+
   runApp(
     const ProviderScope(
       child: MyApp(),

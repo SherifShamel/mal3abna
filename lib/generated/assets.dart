@@ -11,6 +11,8 @@ class Assets {
   static const String cubitsAddPlayersStates = 'lib/features/add_player_feature/cubits/add_players_states.dart';
   static const String cubitsGetPlayersCubit = 'lib/features/home_feature/cubits/get_players_cubit.dart';
   static const String cubitsGetPlayersStates = 'lib/features/home_feature/cubits/get_players_states.dart';
+  static const String cubitsSelectingPlayersCubit = 'lib/features/home_feature/cubits/selectingPlayersCubit.dart';
+  static const String cubitsSelectingPlayersStates = 'lib/features/home_feature/cubits/selectingPlayersStates.dart';
   static const String dataGameStatistics = 'lib/data/game_statistics.dart';
   static const String dataPlayersData = 'lib/data/players_data.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';

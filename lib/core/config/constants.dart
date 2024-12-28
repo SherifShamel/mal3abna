@@ -6,3 +6,4 @@ class Constants {
 }
 
 const kPlayersBox='players_box';
+const kSelectedPlayers='selected_players';
