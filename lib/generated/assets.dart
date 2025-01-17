@@ -13,7 +13,6 @@ class Assets {
   static const String cubitsGetPlayersStates = 'lib/features/home_feature/cubits/get_players_states.dart';
   static const String cubitsSelectingPlayersCubit = 'lib/features/home_feature/cubits/selectingPlayersCubit.dart';
   static const String cubitsSelectingPlayersStates = 'lib/features/home_feature/cubits/selectingPlayersStates.dart';
-  static const String dataGameStatistics = 'lib/data/game_statistics.dart';
   static const String dataPlayersData = 'lib/data/players_data.dart';
   static const String generatedAssets = 'lib/generated/assets.dart';
   static const String libMain = 'lib/main.dart';
@@ -32,6 +31,7 @@ class Assets {
   static const String playersFekry = 'assets/players/fekry.jpg';
   static const String playersHazem = 'assets/players/hazem.jpg';
   static const String playersMohab = 'assets/players/mohab.jpg';
+
   static const String playersSherif = 'assets/players/sherif.jpg';
   static const String playersSho2o = 'assets/players/sho2o.jpg';
   static const String playersWasseem = 'assets/players/wasseem.jpg';
