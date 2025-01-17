@@ -20,10 +20,12 @@ class Assets {
   static const String libSimpleBlocObserver = 'lib/simple_bloc_observer.dart';
   static const String modelsGameModel = 'lib/models/game_model.dart';
   static const String modelsPlayerModel = 'lib/models/player_model.dart';
+  static const String modelsTeamModel = 'lib/models/team_model.dart';
   static const String pagesAddPlayerView = 'lib/features/add_player_feature/pages/add_player_view.dart';
   static const String pagesGameViewScreen = 'lib/features/game_view_feature/pages/game_view_screen.dart';
   static const String pagesHomePage = 'lib/features/home_feature/pages/home_page.dart';
   static const String pagesPlayerScoreView = 'lib/features/player_score_feature/pages/player_score_view.dart';
+  static const String pagesSelectingTeamsPage = 'lib/features/selecting_teams_feature/pages/selecting_teams_page.dart';
   static const String playersAdham = 'assets/players/adham.jpg';
   static const String playersAntar = 'assets/players/antar.jpg';
   static const String playersEnani = 'assets/players/enani.jpg';

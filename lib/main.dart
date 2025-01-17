@@ -6,6 +6,7 @@ import 'package:mal3abna/core/config/application_theme_manager.dart';
 import 'package:mal3abna/core/config/constants.dart';
 import 'package:mal3abna/core/config/page_route_names.dart';
 import 'package:mal3abna/core/config/routes.dart';
+import 'package:mal3abna/models/game_model.dart';
 import 'package:mal3abna/models/player_model.dart';
 import 'package:mal3abna/simple_bloc_observer.dart';
 
@@ -16,7 +17,9 @@ void main() async {
 
   Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(PlayerModelAdapter());
+  Hive.registerAdapter(GameModelAdapter());
   await Hive.openBox<PlayerModel>(kPlayersBox);
+  await Hive.openBox<GameModel>(kSelectedPlayersBox);
 
 
   runApp(

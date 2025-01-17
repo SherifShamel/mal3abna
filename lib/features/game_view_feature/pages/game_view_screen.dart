@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mal3abna/data/players_data.dart';
 import 'package:mal3abna/provider/game_score_provider.dart';
 
@@ -15,6 +16,7 @@ class GameViewScreen extends ConsumerStatefulWidget {
 }
 
 class _GameViewScreenState extends ConsumerState<GameViewScreen> {
+
   int score = numberOfGoals;
 
   @override
@@ -38,7 +40,7 @@ class _GameViewScreenState extends ConsumerState<GameViewScreen> {
             child: GridView.builder(
               itemCount: selectedPlayers.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2),
+                  crossAxisCount: 2,),
               itemBuilder: (context, index) => GamePlayerWidget(
                 playerModel: selectedPlayers[index],
               ),

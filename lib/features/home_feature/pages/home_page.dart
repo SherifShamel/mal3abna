@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
           builder: (context, state) {
             BlocProvider.of<GetPlayersCubit>(context).fetchAllPlayers();
             List<PlayerModel> players =
-                BlocProvider.of<GetPlayersCubit>(context).players ?? [];
+                BlocProvider.of<GetPlayersCubit>(context).players?.where((element) => !element.isSelected).toList() ?? [];
 
             return GridView.builder(
               itemCount: players.length,
@@ -45,13 +45,24 @@ class HomePage extends StatelessWidget {
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) => GamePlayerWidget(
-                index: index,
                 playerModel: players[index],
                 isSelected: players[index].isSelected,
               ),
             );
           },
         ),
+        floatingActionButton: FloatingActionButton.extended(
+          elevation: 20,
+          focusElevation: 8,
+          extendedIconLabelSpacing: 5,
+          onPressed: () {
+            navigatorKey.currentState!.pushNamed(PagesRouteName.selectingTeamsView);
+          },
+          isExtended: true,
+          label: const Text("Select Your Team."),
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+        floatingActionButtonAnimator: FloatingActionButtonAnimator.scaling,
       ),
     );
   }

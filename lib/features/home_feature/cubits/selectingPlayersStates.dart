@@ -1,5 +1,3 @@
-import 'package:mal3abna/models/player_model.dart';
-
 abstract class SelectingPlayersStates{}
 
 class SelectingPlayersSuccess extends SelectingPlayersStates{

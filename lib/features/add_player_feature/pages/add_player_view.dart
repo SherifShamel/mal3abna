@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
 import 'package:mal3abna/features/add_player_feature/cubits/add_players_cubit.dart';
 import 'package:mal3abna/features/add_player_feature/cubits/add_players_states.dart';
 import 'package:mal3abna/features/add_player_feature/widgets/add_player_form.dart';
 
-class AddPlayerView extends StatelessWidget {
+class AddPlayerView extends StatefulWidget {
   const AddPlayerView({super.key});
 
+  @override
+  State<AddPlayerView> createState() => _AddPlayerViewState();
+}
+
+class _AddPlayerViewState extends State<AddPlayerView> {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(

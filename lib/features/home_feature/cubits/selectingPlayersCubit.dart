@@ -15,9 +15,10 @@ class SelectingPlayersCubit extends Cubit<SelectingPlayersStates> {
 
       player.isSelected = !player.isSelected;
 
-      print("${player.playerName} is ${player.isSelected ? 'selected' : 'not selected'}");
-      emit(SelectingPlayersSuccess(playerName: selectedPlayersBox.name));
+      print(
+          "${player.playerName} is ${player.isSelected ? 'selected' : 'not selected'}");
 
+      emit(SelectingPlayersSuccess(playerName: selectedPlayersBox.name));
     } catch (e) {
       emit(SelectingPlayersError(e.toString()));
     }
